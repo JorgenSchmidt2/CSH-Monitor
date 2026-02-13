@@ -1,0 +1,24 @@
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\bin\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.deps.json
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\bin\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.dll
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\bin\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.pdb
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.csproj.AssemblyReference.cache
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.AssemblyInfoInputs.cache
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.AssemblyInfo.cs
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.csproj.CoreCompileInputs.cache
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.dll
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\refint\CHS_Monitor.GraphicsCore.dll
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.pdb
+C:\User Files\Projects\CSH Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\ref\CHS_Monitor.GraphicsCore.dll
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\bin\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.deps.json
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\bin\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.dll
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\bin\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.pdb
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.csproj.AssemblyReference.cache
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.AssemblyInfoInputs.cache
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.AssemblyInfo.cs
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.csproj.CoreCompileInputs.cache
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.dll
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\refint\CHS_Monitor.GraphicsCore.dll
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\CHS_Monitor.GraphicsCore.pdb
+C:\User Files\Projects\CSH-Monitor\CHS_Monitor.GraphicsCore\obj\Debug\net8.0-windows\ref\CHS_Monitor.GraphicsCore.dll

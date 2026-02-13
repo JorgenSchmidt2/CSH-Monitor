@@ -1,0 +1,30 @@
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Model.deps.json
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Model.dll
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Model.pdb
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Core.dll
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Core.pdb
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.csproj.AssemblyReference.cache
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.AssemblyInfoInputs.cache
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.AssemblyInfo.cs
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.csproj.CoreCompileInputs.cache
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Moni.10E9D573.Up2Date
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.dll
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\refint\CSH_Monitor.Model.dll
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.pdb
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Model\obj\Debug\net8.0\ref\CSH_Monitor.Model.dll
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Model.deps.json
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Model.dll
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Model.pdb
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Core.dll
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\bin\Debug\net8.0\CSH_Monitor.Core.pdb
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.csproj.AssemblyReference.cache
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.AssemblyInfoInputs.cache
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.AssemblyInfo.cs
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.csproj.CoreCompileInputs.cache
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Moni.10E9D573.Up2Date
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.dll
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\refint\CSH_Monitor.Model.dll
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\CSH_Monitor.Model.pdb
+C:\User Files\Projects\CSH-Monitor\CSH_Monitor.Model\obj\Debug\net8.0\ref\CSH_Monitor.Model.dll

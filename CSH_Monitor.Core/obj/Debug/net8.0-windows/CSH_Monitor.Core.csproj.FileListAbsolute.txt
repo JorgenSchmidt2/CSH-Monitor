@@ -1,0 +1,5 @@
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Core\obj\Debug\net8.0-windows\CSH_Monitor.Core.csproj.AssemblyReference.cache
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Core\obj\Debug\net8.0-windows\CSH_Monitor.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Core\obj\Debug\net8.0-windows\CSH_Monitor.Core.AssemblyInfoInputs.cache
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Core\obj\Debug\net8.0-windows\CSH_Monitor.Core.AssemblyInfo.cs
+C:\User Files\Projects\CSH Monitor\CSH_Monitor.Core\obj\Debug\net8.0-windows\CSH_Monitor.Core.csproj.CoreCompileInputs.cache

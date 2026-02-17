@@ -1,5 +1,5 @@
-﻿using CHS_Monitor.GraphicsCore.Base;
-using CHS_Monitor.GraphicsCore.Interfaces;
+﻿using CSH_Monitor.GraphicsCore.Base;
+using CSH_Monitor.GraphicsCore.Interfaces;
 
 namespace CSH_Monitor.UI.Features.EntryWindow
 {
@@ -13,16 +13,23 @@ namespace CSH_Monitor.UI.Features.EntryWindow
         public int hei = 450;
         public int Hei
         {
-            get { return hei; }
+            get => hei; 
             set { hei = value; CheckChanges(); }
         }
 
         public int wid = 600;
         public int Wid
         {
-            get {  return wid; }
+            get => wid; 
             set { wid = value; CheckChanges(); }
         }
 
+
+        public string testr = "Test_pos_1";
+        public string Testr
+        {
+            get => testr;
+            set { testr = value; CheckChanges(); }
+        }
     }
 }

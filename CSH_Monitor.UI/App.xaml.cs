@@ -1,5 +1,5 @@
-﻿using CHS_Monitor.GraphicsCore.Base;
-using CHS_Monitor.GraphicsCore.Interfaces;
+﻿using CSH_Monitor.GraphicsCore.Base;
+using CSH_Monitor.GraphicsCore.Interfaces;
 using CSH_Monitor.UI.AppService;
 using CSH_Monitor.UI.Features.EntryWindow;
 using Microsoft.Extensions.DependencyInjection;

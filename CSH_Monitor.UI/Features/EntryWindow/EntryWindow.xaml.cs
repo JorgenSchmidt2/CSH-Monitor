@@ -11,5 +11,7 @@ namespace CSH_Monitor.UI.Features.EntryWindow
         {
             InitializeComponent();
         }
+
+
     }
 }

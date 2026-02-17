@@ -1,4 +1,4 @@
-﻿using CHS_Monitor.GraphicsCore.Interfaces;
+﻿using CSH_Monitor.GraphicsCore.Interfaces;
 using CSH_Monitor.UI.Features.EntryWindow;
 
 namespace CSH_Monitor.UI.AppService

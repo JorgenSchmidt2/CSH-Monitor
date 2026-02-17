@@ -11,10 +11,16 @@
         mc:Ignorable="d"
         DataContext="{Binding Source={x:Static edge:App.Locator}, Path=EntryWindowViewModel}"
         MinHeight="500" MinWidth="600"
-        Title="CSH Monitor V0.0.0-unstable" Height="{Binding Hei}" Width="{Binding Wid}">
+        WindowStartupLocation="CenterScreen"
+        Title="CSH Monitor V0.0.0-unstable" Height="720" Width="1280">
     <i:Interaction.Behaviors>
         <behaviors:WindowSizeBehavior Width="{Binding Wid, Mode=OneWayToSource}" Height="{Binding Hei, Mode=OneWayToSource}"/>
     </i:Interaction.Behaviors>
+    <Window.Resources>
+        <DataTemplate x:Key="MainPlotTemplate">
+            <TextBlock Text="{Binding Testr}"/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -41,18 +47,62 @@
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Background="Gray">
+            <Border Grid.Column="0" Background="Gray" Margin="0,20,0,0">
                 <TextBlock Text="возможно здесь будет что либо по проектам" TextWrapping="Wrap"/>
             </Border>
-            <Border Grid.Column="1" Background="White">
-                <TextBlock Text="здесь будет график и дополнительные показатели" TextWrapping="Wrap" Margin="10,0"/>
+            
+            <Border Grid.Column="1">
+                <TabControl>
+                    <TabItem Header="Вкладка 1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ContentPresenter Grid.Row="0" Grid.Column="0"
+                                            Content="{Binding}"
+                                            ContentTemplate="{StaticResource MainPlotTemplate}"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Вкладка 2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ContentPresenter Grid.Row="0" Grid.Column="0"
+                                            Content="{Binding}"
+                                            ContentTemplate="{StaticResource MainPlotTemplate}"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Вкладка 3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ContentPresenter Grid.Row="0" Grid.Column="0"
+                                            Content="{Binding}"
+                                            ContentTemplate="{StaticResource MainPlotTemplate}"/>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
             </Border>
-            <Border Grid.Column="2" Background="LightGray">
+            <Border Grid.Column="2" Background="LightGray" Margin="0,20,0,0">
                 <TextBlock Text="здесь будет поле ввода данных" TextWrapping="Wrap"/>
             </Border>
         </Grid>

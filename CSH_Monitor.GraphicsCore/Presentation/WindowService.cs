@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using System.Windows;
 
-namespace CSH_Monitor.GraphicsCore.Base
+namespace CSH_Monitor.GraphicsCore.Presentation
 {
     public class WindowService : IWindowService
     {

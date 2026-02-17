@@ -11,6 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSH_Monitor.Core", "CSH_Mon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSH_Monitor.GraphicsCore", "CSH_Monitor.GraphicsCore\CSH_Monitor.GraphicsCore.csproj", "{9A880768-9FF9-46D0-B802-7917DCEA13B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSH_Monitor.Infrastructure", "CSH_Monitor.Infrastructure\CSH_Monitor.Infrastructure.csproj", "{89429230-9B06-4BE9-9019-C3196386541B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +40,10 @@ Global
 		{9A880768-9FF9-46D0-B802-7917DCEA13B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A880768-9FF9-46D0-B802-7917DCEA13B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A880768-9FF9-46D0-B802-7917DCEA13B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89429230-9B06-4BE9-9019-C3196386541B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89429230-9B06-4BE9-9019-C3196386541B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89429230-9B06-4BE9-9019-C3196386541B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89429230-9B06-4BE9-9019-C3196386541B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,10 +7,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <AssemblyName>CSH Monitor</AssemblyName>
+    <ApplicationIcon>Resources\Pictures\Логотип-УНИИМ-СО-rgb-300dpi-_002_.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Content Include="Resources\Pictures\Логотип-УНИИМ-СО-rgb-300dpi-_002_.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Services\" />
   </ItemGroup>
 
@@ -25,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CSH_Monitor.Core\CSH_Monitor.Core.csproj" />
     <ProjectReference Include="..\CSH_Monitor.GraphicsCore\CSH_Monitor.GraphicsCore.csproj" />
+    <ProjectReference Include="..\CSH_Monitor.Infrastructure\CSH_Monitor.Infrastructure.csproj" />
     <ProjectReference Include="..\CSH_Monitor.Model\CSH_Monitor.Model.csproj" />
   </ItemGroup>
 

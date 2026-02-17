@@ -7,18 +7,16 @@
         xmlns:edge="clr-namespace:CSH_Monitor.UI"
         xmlns:behaviors="clr-namespace:CSH_Monitor.UI.Behaviors"
         xmlns:local="clr-namespace:CSH_Monitor.UI.Features.EntryWindow"
-        xmlns:appservice="clr-namespace:CSH_Monitor.UI.AppService"
         mc:Ignorable="d"
-        DataContext="{Binding Source={x:Static edge:App.Locator}, Path=EntryWindowViewModel}"
         MinHeight="500" MinWidth="600"
         WindowStartupLocation="CenterScreen"
         Title="CSH Monitor V0.0.0-unstable" Height="720" Width="1280">
     <i:Interaction.Behaviors>
-        <behaviors:WindowSizeBehavior Width="{Binding Wid, Mode=OneWayToSource}" Height="{Binding Hei, Mode=OneWayToSource}"/>
+        <behaviors:WindowSizeBehavior Width="{Binding WindowWidth, Mode=OneWayToSource}" Height="{Binding WindowHeight, Mode=OneWayToSource}"/>
     </i:Interaction.Behaviors>
     <Window.Resources>
         <DataTemplate x:Key="MainPlotTemplate">
-            <TextBlock Text="{Binding Testr}"/>
+            <TextBlock Text="{Binding CurrentDisplayText}"/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
@@ -57,7 +55,7 @@
             </Border>
             
             <Border Grid.Column="1">
-                <TabControl>
+                <TabControl SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}">
                     <TabItem Header="Вкладка 1">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -111,8 +109,8 @@
             <StatusBarItem>
                 <WrapPanel>
                     <TextBlock Text="Строка состояния (нужно подумать что ещё сюда добавить)" Margin="5,0"/>
-                    <TextBlock Text="{Binding Wid}" Margin="5,0"/>
-                    <TextBlock Text="{Binding Hei}" Margin="5,0"/>
+                    <TextBlock Text="{Binding WindowWidth}" Margin="5,0"/>
+                    <TextBlock Text="{Binding WindowHeight}" Margin="5,0"/>
                 </WrapPanel>
             </StatusBarItem>
         </StatusBar>

@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.Windows.Compatibility" Version="10.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Rendering\" />
+  </ItemGroup>
+
 </Project>

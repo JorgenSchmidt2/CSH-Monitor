@@ -1,3 +1,7 @@
+#----------------------------------------------------------------
+# Игнорируем все бинарники и всё содержимое .vs папки
+#----------------------------------------------------------------
+
 .vs/
 /CSH_Monitor.GraphicsCore/bin/
 /CSH_Monitor.GraphicsCore/obj/
@@ -7,3 +11,20 @@
 /CSH_Monitor.Model/obj/
 /CSH_Monitor.UI/bin/
 /CSH_Monitor.UI/obj/
+/CSH_Monitor.Infrastructure/bin
+/CSH_Monitor.Infrastructure/obj
+*.exe
+*.dll
+
+#----------------------------------------------------------------
+# Игнорируем все медиафайлы кроме .png, .jpg, .jpeg и .ico
+#----------------------------------------------------------------
+
+*.gif
+*.bmp
+*.tiff
+*.mp3
+*.mp4
+*.mov
+*.avi
+*.webm

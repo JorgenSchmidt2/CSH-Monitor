@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace CSH_Monitor.GraphicsCore.Base
+namespace CSH_Monitor.GraphicsCore.Presentation
 {
     public class Command : ICommand
     {

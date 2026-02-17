@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CSH_Monitor.Core\CSH_Monitor.Core.csproj" />
-    <ProjectReference Include="..\CSH_Monitor.Infrastructure\CSH_Monitor.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

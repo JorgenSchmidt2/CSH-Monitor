@@ -10,4 +10,8 @@
     <ProjectReference Include="..\CSH_Monitor.Core\CSH_Monitor.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Logging\" />
+  </ItemGroup>
+
 </Project>

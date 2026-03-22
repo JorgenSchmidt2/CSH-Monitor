@@ -1,5 +1,5 @@
-﻿using CSH_Monitor.Core.Entities.BasicEntities;
-using CSH_Monitor.Core.Entities.BasicListEntities;
+﻿using CSH_Monitor.Core.Entities.CommonListEntities;
+using CSH_Monitor.Core.Generics.CommonGenerics.TwoParamGenerics;
 using CSH_Monitor.Core.Responses;
 using System.Globalization;
 

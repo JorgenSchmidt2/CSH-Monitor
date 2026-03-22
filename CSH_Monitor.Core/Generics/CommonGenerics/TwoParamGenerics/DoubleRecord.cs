@@ -1,4 +1,4 @@
-﻿namespace CSH_Monitor.Core.Entities.BasicEntities
+﻿namespace CSH_Monitor.Core.Generics.CommonGenerics.TwoParamGenerics
 {
     /// <summary>
     /// Немаркированный record (оба значения неуникальны), различие делается только для того, 

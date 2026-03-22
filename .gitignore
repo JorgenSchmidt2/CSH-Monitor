@@ -15,6 +15,7 @@
 /CSH_Monitor.Infrastructure/obj
 /CSH_Monitor.Model.Tests
 /CSH_Monitor.Infrastructure.Tests
+/Hidden
 *.exe
 *.dll
 

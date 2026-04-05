@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CSH_Monitor.Core\CSH_Monitor.Core.csproj" />
     <ProjectReference Include="..\CSH_Monitor.Infrastructure\CSH_Monitor.Infrastructure.csproj" />
   </ItemGroup>

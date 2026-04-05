@@ -3,6 +3,7 @@ using CSH_Monitor.Core.Interfaces.Model;
 using CSH_Monitor.GraphicsCore.Interfaces;
 using CSH_Monitor.GraphicsCore.Presentation;
 using CSH_Monitor.Infrastructure.Messaging;
+using CSH_Monitor.Infrastructure.Parsing.TabularParsers;
 using CSH_Monitor.Model.Metrology.CertificationCalculator;
 using CSH_Monitor.Model.Metrology.HomogenityCalculator;
 using CSH_Monitor.Model.Metrology.StabilityCalculator;
@@ -30,6 +31,7 @@ namespace CSH_Monitor.UI
             services.AddSingleton<IWindowService, WindowService>();
             services.AddSingleton<IMessenger, Messenger>();
             services.AddSingleton<IListMessenger, ListMessenger>();
+            services.AddSingleton<ITabularParser, TabularParser>();
 
             // Регистрация классов с математической логикой
             services.AddSingleton<ICertificationCalculator, CertificationCalculator>();

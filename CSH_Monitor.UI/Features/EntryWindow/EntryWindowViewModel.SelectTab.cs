@@ -16,32 +16,30 @@
             }
         }
 
-        private string currentDisplayText;
-        public string CurrentDisplayText
-        {
-            get => currentDisplayText;
-            set => SetProperty(ref currentDisplayText, value);
-        }
+        private EPlotTab CurrentPlotTab { get; set; }
 
         private void UpdateContentForSelectedTab()
         {
-            // нужно будет раскидать логику по "вкладочным" партиалам позднее в виде void методов
             switch (selectedTabIndex)
             {
                 case 0:
-                    CurrentDisplayText = "Текст для первой вкладки";
+                    CurrentPlotTab = EPlotTab.Sertification;
                     break;
                 case 1:
-                    CurrentDisplayText = "Текст для второй вкладки";
+                    CurrentPlotTab = EPlotTab.Stability;
                     break;
                 case 2:
-                    CurrentDisplayText = "Текст для третьей вкладки";
-                    break;
-                default:
-                    CurrentDisplayText = "Критическая ошибка";
+                    CurrentPlotTab = EPlotTab.Homogenity;
                     break;
             }
         }
 
+    }
+
+    public enum EPlotTab
+    {
+        Sertification,
+        Stability,
+        Homogenity
     }
 }

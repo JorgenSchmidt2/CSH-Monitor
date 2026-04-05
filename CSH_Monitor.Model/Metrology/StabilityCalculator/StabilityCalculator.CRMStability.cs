@@ -2,12 +2,13 @@
 using CSH_Monitor.Core.Entities.DataEntities.StatisticsDataEntities.Enumerable;
 using CSH_Monitor.Core.Entities.DataEntities.StatisticsDataEntities.Simple;
 using CSH_Monitor.Core.Generics.CommonGenerics.TwoParamGenerics;
+using CSH_Monitor.Core.Interfaces.Model;
 using CSH_Monitor.Core.Responses;
 using MathNet.Numerics.Distributions;
 
 namespace CSH_Monitor.Model.Metrology.StabilityCalculator
 {
-    public partial class StabilityCalculator
+    public partial class StabilityCalculator : IStabilityCalculator
     {
         #region Основная часть
         

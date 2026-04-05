@@ -1,11 +1,12 @@
 ﻿using CSH_Monitor.Core.Entities.CommonListEntities;
 using CSH_Monitor.Core.Generics.CommonGenerics.TwoParamGenerics;
+using CSH_Monitor.Core.Interfaces.Infrastructure;
 using CSH_Monitor.Core.Responses;
 using System.Globalization;
 
 namespace CSH_Monitor.Infrastructure.Parsing.TabularParsers
 {
-    public partial class TabularParser 
+    public partial class TabularParser : ITabularParser
     {
         public DataResponse<MarkedDoubleRecList> GetDoubleMeasuredData (string InputData)
         {

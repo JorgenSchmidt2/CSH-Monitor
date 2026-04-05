@@ -6,6 +6,6 @@ namespace CSH_Monitor.Core.Interfaces.Model
 {
     public interface IStatisticsCalculator
     {
-        public DataResponse<LinearModelParams> GetLinearRegressionEstimate(MarkedDoubleRecList Records)
+        public DataResponse<LinearModelParams> GetLinearRegressionEstimate(MarkedDoubleRecList Records);
     }
 }

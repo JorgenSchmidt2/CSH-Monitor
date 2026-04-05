@@ -5,6 +5,6 @@ namespace CSH_Monitor.Core.Interfaces.Infrastructure
 {
     public interface ITabularParser
     {
-        //public DataResponse<MarkedDoubleRecList> GetDoubleMeasuredData(string InputData);
+        public DataResponse<MarkedDoubleRecList> GetDoubleMeasuredData(string InputData);
     }
 }

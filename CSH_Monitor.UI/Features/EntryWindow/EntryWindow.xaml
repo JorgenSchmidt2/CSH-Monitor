@@ -4,21 +4,17 @@
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:edge="clr-namespace:CSH_Monitor.UI"
         xmlns:behaviors="clr-namespace:CSH_Monitor.UI.Behaviors"
         xmlns:local="clr-namespace:CSH_Monitor.UI.Features.EntryWindow"
         mc:Ignorable="d"
         MinHeight="500" MinWidth="600"
         WindowStartupLocation="CenterScreen"
-        Title="CSH Monitor V0.0.0-unstable" Height="720" Width="1280">
+        Title="CSH Monitor v0.1.0-unstable" Height="720" Width="1280">
     <i:Interaction.Behaviors>
         <behaviors:WindowSizeBehavior Width="{Binding WindowWidth, Mode=OneWayToSource}" Height="{Binding WindowHeight, Mode=OneWayToSource}"/>
     </i:Interaction.Behaviors>
-    <Window.Resources>
-        <DataTemplate x:Key="MainPlotTemplate">
-            <TextBlock Text="{Binding CurrentDisplayText}"/>
-        </DataTemplate>
-    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -27,7 +23,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0" VerticalAlignment="Top">
+        <Menu Grid.Row="0" VerticalAlignment="Top" Background="White">
             <MenuItem Header="File">
 
             </MenuItem>
@@ -39,9 +35,11 @@
             </MenuItem>
         </Menu>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-            <Button Content="Здесь будут различные команды" Margin="5,0"/>
-        </StackPanel>
+        <Border Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                <!--Button Content="" Margin="5,0"/-->
+            </StackPanel>
+        </Border>
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -50,13 +48,46 @@
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Background="Gray" Margin="0,20,0,0">
-                <TextBlock Text="возможно здесь будет что либо по проектам" TextWrapping="Wrap"/>
+            <Border Grid.Column="0"  Margin="0,22,0,0" BorderBrush="DarkGray" BorderThickness="1,1,0,1">
+
             </Border>
-            
+
             <Border Grid.Column="1">
                 <TabControl SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}">
-                    <TabItem Header="Вкладка 1">
+                    <TabItem Header="Сертификация">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Стабильность">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0">
+
+                            </StackPanel>
+
+                            <oxy:PlotView Grid.Row="1"
+                                      Controller="{Binding СustomController}"
+                                      Model="{Binding StabilityPlotModel}"/>
+
+                            <StackPanel Grid.Row="2">
+
+                            </StackPanel>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Однородность">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
@@ -65,50 +96,31 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <ContentPresenter Grid.Row="0" Grid.Column="0"
-                                            Content="{Binding}"
-                                            ContentTemplate="{StaticResource MainPlotTemplate}"/>
-                        </Grid>
-                    </TabItem>
-                    <TabItem Header="Вкладка 2">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
 
-                            <ContentPresenter Grid.Row="0" Grid.Column="0"
-                                            Content="{Binding}"
-                                            ContentTemplate="{StaticResource MainPlotTemplate}"/>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Вкладка 3">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
 
-                            <ContentPresenter Grid.Row="0" Grid.Column="0"
-                                            Content="{Binding}"
-                                            ContentTemplate="{StaticResource MainPlotTemplate}"/>
-                        </Grid>
-                    </TabItem>
                 </TabControl>
             </Border>
-            <Border Grid.Column="2" Background="LightGray" Margin="0,20,0,0">
-                <TextBlock Text="здесь будет поле ввода данных" TextWrapping="Wrap"/>
+            <Border Grid.Column="2" Margin="0,22,0,0" BorderBrush="DarkGray" BorderThickness="0,1,1,1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0" Command="{Binding GetData}" BorderThickness="0.5">
+                        <TextBlock Text="Ввести данные" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <TextBox Grid.Row="1" Text="{Binding MainDataString}" AcceptsReturn="True" AcceptsTab="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" BorderThickness="0.5"/>
+                </Grid>
             </Border>
         </Grid>
 
         <StatusBar Grid.Row="3">
             <StatusBarItem>
                 <WrapPanel>
-                    <TextBlock Text="Строка состояния (нужно подумать что ещё сюда добавить)" Margin="5,0"/>
+                    <TextBlock Text="Строка состояния" Margin="5,0"/>
                     <TextBlock Text="{Binding WindowWidth}" Margin="5,0"/>
                     <TextBlock Text="{Binding WindowHeight}" Margin="5,0"/>
                 </WrapPanel>

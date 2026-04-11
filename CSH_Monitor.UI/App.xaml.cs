@@ -7,6 +7,7 @@ using CSH_Monitor.Infrastructure.Parsing.TabularParsers;
 using CSH_Monitor.Model.Metrology.CertificationCalculator;
 using CSH_Monitor.Model.Metrology.HomogenityCalculator;
 using CSH_Monitor.Model.Metrology.StabilityCalculator;
+using CSH_Monitor.Model.Statistics;
 using CSH_Monitor.UI.Features.EntryWindow;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
@@ -34,6 +35,7 @@ namespace CSH_Monitor.UI
             services.AddSingleton<ITabularParser, TabularParser>();
 
             // Регистрация классов с математической логикой
+            services.AddSingleton<IStatisticsCalculator, StatisticsCalculator>();
             services.AddSingleton<ICertificationCalculator, CertificationCalculator>();
             services.AddSingleton<IHomogenityCalculator, HomogenityCalculator>();
             services.AddSingleton<IStabilityCalculator, StabilityCalculator>();

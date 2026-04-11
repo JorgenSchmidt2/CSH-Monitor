@@ -57,12 +57,22 @@
                     <TabItem Header="Сертификация">
                         <Grid>
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="5*"/>
-                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0">
+
+                            </StackPanel>
+
+                            <oxy:PlotView Grid.Row="1"
+                                          Controller="{Binding СustomController}"
+                                          Model="{Binding SertificationPlotModel}"/>
+
+                            <StackPanel Grid.Row="2">
+
+                            </StackPanel>
 
                         </Grid>
                     </TabItem>
@@ -79,8 +89,8 @@
                             </StackPanel>
 
                             <oxy:PlotView Grid.Row="1"
-                                      Controller="{Binding СustomController}"
-                                      Model="{Binding StabilityPlotModel}"/>
+                                          Controller="{Binding СustomController}"
+                                          Model="{Binding StabilityPlotModel}"/>
 
                             <StackPanel Grid.Row="2">
 
@@ -90,11 +100,22 @@
                     <TabItem Header="Однородность">
                         <Grid>
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0">
+
+                            </StackPanel>
+
+                            <oxy:PlotView Grid.Row="1"
+                                          Controller="{Binding СustomController}"
+                                          Model="{Binding HomohenityPlotModel}"/>
+
+                            <StackPanel Grid.Row="2">
+
+                            </StackPanel>
 
 
                         </Grid>

@@ -65,7 +65,7 @@ namespace CSH_Monitor.Model.Metrology.StabilityCalculator
                     // Измеренные/расчитанные значения
                     new SimplifiedRegressionPoint
                     {
-                        MeansuredValue = Item.Marker,
+                        MeansuredValue = Item.Value,
                         RegressionLinePoint = ModelParams.Intercept + ModelParams.Slope * Item.Marker
                     }
                 )
@@ -105,7 +105,7 @@ namespace CSH_Monitor.Model.Metrology.StabilityCalculator
             double SumSquaredDeviation = 0;
             foreach (var Item in RegressionData)
             {
-                SumSquaredDeviation += Math.Sqrt(Item.Value.MeansuredValue - ModelParams.ValueAverage);
+                SumSquaredDeviation += Math.Pow(Item.Value.MeansuredValue - ModelParams.ValueAverage, 2);
             }
 
             // Считаем границы доверительных интервалов + добавляем старые данные
@@ -131,7 +131,7 @@ namespace CSH_Monitor.Model.Metrology.StabilityCalculator
         }
 
         private double GetModelStandartError(double SlopeStandartError, int DataCount, double CurTime, double MedTime, double SumSquaredDeviation) 
-            => SlopeStandartError * Math.Sqrt(1/Convert.ToDouble(DataCount) + (CurTime - MedTime)/SumSquaredDeviation );
+            => SlopeStandartError * Math.Sqrt(1/Convert.ToDouble(DataCount) + Math.Pow(CurTime - MedTime, 2)/SumSquaredDeviation );
 
         private double GetStabilityError(double Slope, double CurTime, double CDF, double ModelStandartError) 
             => Math.Abs(Slope) * CurTime + CDF * ModelStandartError;

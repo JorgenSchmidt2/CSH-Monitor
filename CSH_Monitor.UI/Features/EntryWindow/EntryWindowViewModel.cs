@@ -1,11 +1,9 @@
-﻿using CSH_Monitor.Core.Entities.CommonListEntities;
-using CSH_Monitor.Core.Interfaces.Infrastructure;
+﻿using CSH_Monitor.Core.Interfaces.Infrastructure;
 using CSH_Monitor.Core.Interfaces.Model;
 using CSH_Monitor.GraphicsCore.Base;
 using CSH_Monitor.GraphicsCore.Interfaces;
 using OxyPlot;
 using OxyPlot.Axes;
-using System.Windows;
 
 namespace CSH_Monitor.UI.Features.EntryWindow
 {

@@ -1,8 +1,5 @@
-﻿using CSH_Monitor.Core.Entities.CommonListEntities;
-using CSH_Monitor.Core.Entities.DataEntities.StatisticsDataEntities.Simple;
-using OxyPlot;
+﻿using OxyPlot;
 using OxyPlot.Series;
-using System.Windows;
 
 namespace CSH_Monitor.UI.Features.EntryWindow
 {
@@ -33,38 +30,11 @@ namespace CSH_Monitor.UI.Features.EntryWindow
         }
         #endregion
 
-        #region Логика чтения данных
-        // 
-        private void ReadMainData(string MainData, ref MarkedDoubleRecList DataList)
-        {
-            var CurrentResponce = _tabularParser.GetDoubleMeasuredData(MainData);
-            if (!CurrentResponce.Status || CurrentResponce.Data == null)
-            {
-                MessageBox.Show(CurrentResponce.Message);
-                return;
-            }
-            DataList = CurrentResponce.Data;
-        }
 
+        #region
         private void ReadMainStringAsStabilityData()
         {
-            var DataList = new MarkedDoubleRecList();
-            ReadMainData(MainDataString, ref DataList);
-
-            var ModelResponse = _statisticsCalculator.GetLinearRegressionEstimate(DataList);
-            if (!ModelResponse.Status || ModelResponse.Data == null)
-            {
-                MessageBox.Show(ModelResponse.Message);
-                return;
-            }
-            var Model = ModelResponse.Data;
-
-            var ResultResponce = _stabilityCalculator.GetRegressionModelData(DataList, ref Model);
-            if (!ResultResponce.Status || ResultResponce.Data == null)
-            {
-                MessageBox.Show(ResultResponce.Message);
-                return;
-            }
+            // !!!
 
             StabilityPlotModel.Series.Clear();
             StabilityPlotModel.InvalidatePlot(true);
@@ -99,13 +69,9 @@ namespace CSH_Monitor.UI.Features.EntryWindow
             };
 
             // Заполнение данных
-            foreach (var Item in ResultResponce.Data)
-            {
-                DataPoints.Points.Add(new ScatterPoint(Item.Marker, Item.Value.MeansuredValue));
-                TrendLine.Points.Add(new DataPoint(Item.Marker, Item.Value.RegressionLinePoint));
-                LowerLine.Points.Add(new DataPoint(Item.Marker, Item.Value.RegressionLinePoint - Item.Value.TrustInterval));
-                UpperLine.Points.Add(new DataPoint(Item.Marker, Item.Value.RegressionLinePoint + Item.Value.TrustInterval));
-            }
+            
+            //!!!
+
             StabilityPlotModel.Series.Add(DataPoints);
             StabilityPlotModel.Series.Add(TrendLine);
             //StabilityPlotModel.Series.Add(LowerLine);

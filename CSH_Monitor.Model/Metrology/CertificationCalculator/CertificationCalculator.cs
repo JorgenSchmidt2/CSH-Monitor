@@ -2,7 +2,7 @@
 
 namespace CSH_Monitor.Model.Metrology.CertificationCalculator
 {
-    public class CertificationCalculator : ICertificationCalculator
+    public partial class CertificationCalculator : ICertificationCalculator
     {
 
     }

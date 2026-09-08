@@ -16,6 +16,146 @@
         <behaviors:WindowSizeBehavior Width="{Binding WindowWidth, Mode=OneWayToSource}" Height="{Binding WindowHeight, Mode=OneWayToSource}"/>
         <behaviors:TreeViewSelectedItemBehavior SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoExpand="True"/>
     </i:Interaction.Behaviors>
+    <Window.Resources>
+        <!-- Кнопка с анимацией -->
+        <Style x:Key="AnimatedButton" TargetType="Button">
+            <Setter Property="Background" Value="#ddd"/>
+            <Setter Property="Foreground" Value="#000"/>
+            <Setter Property="Padding" Value="18, 0"/>
+            <Setter Property="Height" Value="24"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                            Background="{TemplateBinding Background}" 
+                            CornerRadius="3"
+                            Padding="{TemplateBinding Padding}"
+                            RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="border"
+                                                   Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                                   To="1.05" Duration="0:0:0.15"/>
+                                        <DoubleAnimation Storyboard.TargetName="border"
+                                                   Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                   To="1.05" Duration="0:0:0.15"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="border"
+                                                   Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                                   To="1" Duration="0:0:0.15"/>
+                                        <DoubleAnimation Storyboard.TargetName="border"
+                                                   Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                   To="1" Duration="0:0:0.15"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#bbb"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundSlider" TargetType="Slider">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Slider">
+                        <Grid VerticalAlignment="Center">
+                            <Track x:Name="PART_Track" Height="8">
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton Command="Slider.DecreaseLarge">
+                                        <RepeatButton.Template>
+                                            <ControlTemplate TargetType="RepeatButton">
+                                                <Border Background="#2ab" CornerRadius="1"/>
+                                            </ControlTemplate>
+                                        </RepeatButton.Template>
+                                    </RepeatButton>
+                                </Track.DecreaseRepeatButton>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton Command="Slider.IncreaseLarge">
+                                        <RepeatButton.Template>
+                                            <ControlTemplate TargetType="RepeatButton">
+                                                <Border Background="#aaa" CornerRadius="1"/>
+                                            </ControlTemplate>
+                                        </RepeatButton.Template>
+                                    </RepeatButton>
+                                </Track.IncreaseRepeatButton>
+                                <Track.Thumb>
+                                    <Thumb>
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Grid>
+                                                    <Ellipse Width="8" Height="8" Fill="Black"/>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="WatermarkTextBox" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                SnapsToDevicePixels="True">
+                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false" 
+                                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                            </Border>
+
+                            <TextBlock x:Name="placeholder" 
+                                   Text="{TemplateBinding Tag}" 
+                                   Foreground="DarkGray" 
+                                   IsHitTestVisible="False" 
+                                   Margin="6,0,0,0" 
+                                   VerticalAlignment="Center" 
+                                   Visibility="Collapsed"/>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                                <Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="MenuItem">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="IsSubmenuOpen" Value="True"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -24,22 +164,42 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0" VerticalAlignment="Top" Background="White">
-            <MenuItem Header="File">
+        <Menu Grid.Row="0" VerticalAlignment="Top" Background="White" Margin="0,2,0,0">
+            
+            <MenuItem Header="Файл">
 
             </MenuItem>
-            <MenuItem Header="Edit" >
+            <MenuItem Header="Правка" >
 
             </MenuItem>
-            <MenuItem Header="View" >
-
+            <MenuItem Header="Вид" >
+                <MenuItem Header="Размер окна">
+                    <MenuItem Header="480x1000"/>
+                    <MenuItem Header="480x1000"/>
+                </MenuItem>
             </MenuItem>
         </Menu>
 
-        <Border Grid.Row="1">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
-                <!--Button Content="" Margin="5,0"/-->
-            </StackPanel>
+        <Border Grid.Row="1" HorizontalAlignment="Center">
+            <ItemsControl HorizontalContentAlignment="Center" Margin="20">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <Button Content="Загрузка из файла Excel" Margin="5,1" Style="{StaticResource AnimatedButton}" />
+                <Button Content="Загрузка из буфера обмена" Margin="5,1" Style="{StaticResource AnimatedButton}"/>
+                <Button Content="Пакетная обработка" Margin="5,1" Style="{StaticResource AnimatedButton}"/>
+                <Button Content="Экспортировать в файл Excel" Margin="5,1" Style="{StaticResource AnimatedButton}"/>
+                <Button Content="Очистить данные" Margin="5,1" Style="{StaticResource AnimatedButton}"/>
+                <Border Margin="0,0,0,-2">
+                    <StackPanel Margin="0,1" Orientation="Horizontal">
+                        <Label Content="Количество знаков: " Margin="8,0,0,0" VerticalAlignment="Center"/>
+                        <Slider Value="{Binding DecimalPlaces}" Minimum="1" Maximum="9" Width="80" Margin="0,0,0,-3" VerticalAlignment="Center" Style="{StaticResource RoundSlider}" />
+                        <Label Content="{Binding DecimalPlaces}" VerticalAlignment="Center" Margin="0,0,0,-1" />
+                    </StackPanel>
+                </Border>
+            </ItemsControl>
         </Border>
 
         <Grid Grid.Row="2">
@@ -85,9 +245,23 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Row="0">
-
-                            </StackPanel>
+                            <WrapPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
+                                <TextBox Text="{Binding TargetExpirationDate}" Style="{StaticResource WatermarkTextBox}" Tag="ЦСГ" Width="60" Margin="0,0,10,0" />
+                                <TextBox Text="{Binding TargetUncertanity}" Style="{StaticResource WatermarkTextBox}" Tag="ustab" Width="60" Margin="0,0,10,0"/>
+                                <TextBox Text="{Binding TargetError}" Style="{StaticResource WatermarkTextBox}" Tag="ΔT" Width="60" Margin="0,0,10,0"/>
+                                <ComboBox ItemsSource="{Binding ProbabilityItems}" 
+                                      SelectedValue="{Binding SelectedProbabilityValue}"
+                                      SelectedValuePath="Value">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock>
+                                                <Run Text="Вероятность: "/>
+                                                <Run Text="{Binding Value}"/>
+                                            </TextBlock>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </WrapPanel>
 
                             <oxy:PlotView Grid.Row="1"
                                           Controller="{Binding СustomController}"
@@ -106,9 +280,11 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Row="0">
-
-                            </StackPanel>
+                            <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,5,0,0">
+                                <TextBox Text="{Binding SampleMass}" Style="{StaticResource WatermarkTextBox}" Tag="m" Width="60" Margin="0,0,10,0" />
+                                <TextBox Text="{Binding DetectionLimit}" Style="{StaticResource WatermarkTextBox}" Tag="Δm" Width="60" Margin="0,0,10,0" />
+                                <Button Command="{Binding RemoveOutliers}" Content="Удалить выбросы" Margin="0,0,10,0" Padding="10,0" Height="20"/>
+                            </WrapPanel>
 
                             <oxy:PlotView Grid.Row="1"
                                           Controller="{Binding СustomController}"
@@ -131,10 +307,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Button Grid.Row="0" Command="{Binding GetData}" BorderThickness="0.5">
-                        <TextBlock Text="Ввести данные" TextWrapping="Wrap" TextAlignment="Center"/>
-                    </Button>
-                    <TextBox Grid.Row="1" Text="{Binding MainDataString}" AcceptsReturn="True" AcceptsTab="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" BorderThickness="0.5"/>
+                    
                 </Grid>
             </Border>
         </Grid>

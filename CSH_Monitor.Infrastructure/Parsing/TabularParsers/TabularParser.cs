@@ -7,9 +7,11 @@ namespace CSH_Monitor.Infrastructure.Parsing.TabularParsers
     /// </summary>
     public partial class TabularParser : ITabularParser
     {
+
         public TabularParser() 
-        { 
-            
+        {
+
         }
     }
+
 }

@@ -8,9 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Entities\CommonEntities\" />
-    <Folder Include="Entities\CommonListEntities\" />
-    <Folder Include="Entities\DataEntities\StabilityDataEntities\" />
     <Folder Include="Entities\DataEntities\StatisticsDataEntities\" />
-    <Folder Include="Generics\" />
   </ItemGroup>
 </Project>

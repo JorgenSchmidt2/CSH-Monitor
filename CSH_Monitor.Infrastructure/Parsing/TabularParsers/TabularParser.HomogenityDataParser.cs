@@ -2,8 +2,8 @@
 
 namespace CSH_Monitor.Infrastructure.Parsing.TabularParsers
 {
-    public partial class TabularParser : ITabularParser
+    partial class TabularParser : ITabularParser
     {
-        
+
     }
 }

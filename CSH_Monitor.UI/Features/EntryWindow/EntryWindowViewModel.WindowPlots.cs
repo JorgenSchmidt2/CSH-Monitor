@@ -32,54 +32,7 @@ namespace CSH_Monitor.UI.Features.EntryWindow
 
 
         #region
-        private void ReadMainStringAsStabilityData()
-        {
-            // !!!
-
-            StabilityPlotModel.Series.Clear();
-            StabilityPlotModel.InvalidatePlot(true);
-
-            // 1 Точки
-            var DataPoints = new ScatterSeries
-            {
-                MarkerType = MarkerType.Circle,
-                MarkerSize = 3,
-                MarkerFill = OxyColors.Blue
-            };
-
-            // 2 Линия тренда
-            var TrendLine = new LineSeries
-            {
-                MarkerStrokeThickness = 1.5,
-                Color = OxyColors.Red
-            };
-
-            // 3 Нижняя граница
-            var LowerLine = new LineSeries
-            {
-                MarkerStrokeThickness = 1.5,
-                Color = OxyColors.Blue
-            };
-
-            // 4 Верхняя граница
-            var UpperLine = new LineSeries
-            {
-                MarkerStrokeThickness = 1.5,
-                Color = OxyColors.Blue
-            };
-
-            // Заполнение данных
-            
-            //!!!
-
-            StabilityPlotModel.Series.Add(DataPoints);
-            StabilityPlotModel.Series.Add(TrendLine);
-            //StabilityPlotModel.Series.Add(LowerLine);
-            //StabilityPlotModel.Series.Add(UpperLine);
-
-            // Перезагрузка
-            StabilityPlotModel.InvalidatePlot(true);
-        }
+        
 
         #endregion
     }

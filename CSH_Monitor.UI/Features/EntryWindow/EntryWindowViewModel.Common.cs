@@ -22,8 +22,24 @@ namespace CSH_Monitor.UI.Features.EntryWindow
         }
         #endregion
 
+        #region Основные элементы окна
+
+        public int decimalPlaces = 3;
+        public int DecimalPlaces
+        {
+            get => decimalPlaces;
+            set => SetProperty(ref decimalPlaces, value);
+        }
+
+        #endregion
+
         #region Центральный правый элемент
-        public string mainDataString;
+
+        #endregion
+    }
+}
+
+/*public string mainDataString;
         public string MainDataString
         {
             get => mainDataString;
@@ -47,7 +63,4 @@ namespace CSH_Monitor.UI.Features.EntryWindow
                     }
                 );
             } 
-        }
-        #endregion
-    }
-}
+        }*/

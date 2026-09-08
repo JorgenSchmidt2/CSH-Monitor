@@ -8,7 +8,7 @@ namespace CSH_Monitor.UI.Behaviors
     public class TreeViewSelectedItemBehavior : Behavior<FrameworkElement>
     {
         public static readonly DependencyProperty SelectedItemProperty =
-    DependencyProperty.Register(
+            DependencyProperty.Register(
         nameof(SelectedItem),
         typeof(object),
         typeof(TreeViewSelectedItemBehavior),
